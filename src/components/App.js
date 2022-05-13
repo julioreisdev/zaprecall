@@ -1,5 +1,6 @@
 import React from 'react';
 import '../assets/css/reset.css';
+import '../assets/css/style.css'
 import Welcome from './welcome/Welcome';
 import Deck from './deck/Deck';
 
