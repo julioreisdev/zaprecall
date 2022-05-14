@@ -49,15 +49,15 @@ ion-icon {
     justify-content: space-between;
 }
 
-.ruim {
+.ruim, ion-icon[name="ban-sharp"] {
     color: #FF3030;
 }
 
-.medio {
+.medio, ion-icon[name="help-circle-sharp"] {
     color: #FF922E;
 }
 
-.bom {
+.bom, ion-icon[name="checkmark-circle-sharp"] {
     color: #2FBE34;
 }
 

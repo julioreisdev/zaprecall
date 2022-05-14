@@ -13,6 +13,7 @@ export default function Deck() {
   ];
 
   const [respondidas, setRespondidas] = React.useState(0);
+  const [icones, setIcones] = React.useState([]);
 
   return (
     <>
@@ -25,10 +26,12 @@ export default function Deck() {
               indexPergunta={index + 1}
               contaRespostas={setRespondidas}
               qtdRespostas={respondidas}
+              mudarIcones={setIcones}
+              iconesAtuais={icones}
             />
           ))}
         </div>
-        <Footer qtdRespondidas={respondidas} />
+        <Footer qtdRespondidas={respondidas} icones={icones} />
       </div>
     </>
   );

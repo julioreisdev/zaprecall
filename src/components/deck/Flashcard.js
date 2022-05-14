@@ -11,6 +11,7 @@ export default function Flashcard(props) {
     setTelaFlash("respondido");
     setResposta(valorResposta);
     setIcone(valorIcone);
+    props.mudarIcones([...props.iconesAtuais, valorIcone]);
     props.contaRespostas(props.qtdRespostas + 1);
   }
 
