@@ -34,6 +34,37 @@ ion-icon {
     justify-content: space-between;
 }
 
+.ruim, .medio, .bom {
+    font-family: 'Recursive', sans-serif;
+    font-weight: bold;
+    box-shadow: 0 0 5px rgba(0,0,0,0.6);
+    width: 70%;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    background-color: #fff;
+    text-decoration: line-through;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.ruim {
+    color: #FF3030;
+}
+
+.medio {
+    color: #FF922E;
+}
+
+.bom {
+    color: #2FBE34;
+}
+
+.ruim, .medio, .bom ion-icon {
+    font-weight: bold;
+}
+
 .pergunta {
     position: relative;
     font-family: 'Recursive', sans-serif;

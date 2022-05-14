@@ -1,0 +1,9 @@
+.footer {
+    background-color: aliceblue;
+    padding: 1rem 0.5rem;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    font-family: 'Recursive', sans-serif;
+    text-align: center;
+}
