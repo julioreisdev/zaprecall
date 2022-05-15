@@ -5,13 +5,36 @@ import Flashcard from "./Flashcard";
 import Footer from "../Footer/Footer";
 
 export default function Deck() {
-  const perguntas = [
-    "Você gosta de pão?",
-    "Você gosta muito de pão?",
-    "Muito?",
-    "Mesmo?",
-    "An?"
+  const perguntasEmOrdem = [
+    {
+      question: "Como ganhar muito dinheiro sendo dev?",
+      response: "42 sempre é a resposta!"
+    },
+    {
+      question: "Qual a resposta pra todas as coisas?",
+      response: "42 sempre é a resposta!"
+    },
+    {
+      question: "Como ser um dev de sucesso?",
+      response: "42 sempre é a resposta! pow"
+    },
+    {
+      question: "42?",
+      response: "42 sempre!!!"
+    }
   ];
+
+  const perguntas = [];
+  let indice;
+  let aux = [];
+  let NUMBER_MAGIC = 3;
+
+  for (let i = 0; i < perguntasEmOrdem.length + NUMBER_MAGIC; i++) {
+    indice = parseInt(Math.random() * perguntasEmOrdem.length);
+    aux = perguntasEmOrdem.splice(indice,1);
+    console.log(perguntasEmOrdem.length)
+    perguntas.push(aux[0]);
+  }
 
   const [respondidas, setRespondidas] = React.useState(0);
   const [icones, setIcones] = React.useState([]);
@@ -24,7 +47,7 @@ export default function Deck() {
         <div className="flashcards">
           {perguntas.map((p, index) => (
             <Flashcard
-              pergunta={p}
+              dadosTexto={p}
               indexPergunta={index + 1}
               contaRespostas={setRespondidas}
               qtdRespostas={respondidas}

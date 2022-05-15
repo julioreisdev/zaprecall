@@ -28,7 +28,7 @@ export default function Footer(props) {
   function Contagem() {
     return (
       <div>
-        {props.qtdRespondidas}/{props.perguntas.length}
+        {props.qtdRespondidas}/{props.perguntas.length} concluídos
       </div>
     );
   }

@@ -6,6 +6,7 @@ export default function Flashcard(props) {
   const [telaResposta, setTelaResposta] = React.useState(false);
   const [resposta, setResposta] = React.useState("flashcard");
   const [icone, setIcone] = React.useState("play-outline");
+  const [texto, setTexto] = React.useState(props.dadosTexto.question);
 
   function respondido(valorResposta, valorIcone) {
     setTelaFlash("respondido");
@@ -58,15 +59,19 @@ export default function Flashcard(props) {
     );
   }
   function Pergunta() {
+    function verResposta() {
+      setTexto(props.dadosTexto.response);
+      setTelaResposta(true);
+    }
     return (
       <div className="pergunta">
-        <p>{props.pergunta}</p>
+        <p>{texto}</p>
         {telaResposta ? (
           <Resposta />
         ) : (
           <img
             className="seta-mostrar-opcoes"
-            onClick={() => setTelaResposta(true)}
+            onClick={() => verResposta()}
             src={seta}
             alt=""
           />
