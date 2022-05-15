@@ -13,6 +13,10 @@ export default function Flashcard(props) {
     setIcone(valorIcone);
     props.mudarIcones([...props.iconesAtuais, valorIcone]);
     props.contaRespostas(props.qtdRespostas + 1);
+
+    if (valorResposta === 'bom' || valorResposta === 'medio') {
+      props.setLembrouQtd(props.lembrouQtd + 1);
+    }
   }
 
   function Resposta() {

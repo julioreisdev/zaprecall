@@ -10,10 +10,12 @@ export default function Deck() {
     "Você gosta muito de pão?",
     "Muito?",
     "Mesmo?",
+    "An?"
   ];
 
   const [respondidas, setRespondidas] = React.useState(0);
   const [icones, setIcones] = React.useState([]);
+  const [qtdLembrou, setQtdLembrou] = React.useState(0);
 
   return (
     <>
@@ -28,10 +30,12 @@ export default function Deck() {
               qtdRespostas={respondidas}
               mudarIcones={setIcones}
               iconesAtuais={icones}
+              lembrouQtd={qtdLembrou}
+              setLembrouQtd={setQtdLembrou}
             />
           ))}
         </div>
-        <Footer qtdRespondidas={respondidas} icones={icones} />
+        <Footer qtdRespondidas={respondidas} icones={icones} perguntas={perguntas} qtd={qtdLembrou} />
       </div>
     </>
   );
