@@ -55,8 +55,8 @@ export default function Footer(props) {
         ""
       )}
       <Contagem />
-      {props.icones.map((name) => (
-        <ion-icon name={name}></ion-icon>
+      {props.icones.map((name, index) => (
+        <ion-icon key={index} name={name}></ion-icon>
       ))}
     </div>
   );
